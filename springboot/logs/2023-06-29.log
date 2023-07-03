@@ -1,0 +1,505 @@
+[INFO]2023-06-29 11:52:30,546 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 19344 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 11:52:30,547 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 11:52:30,585 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-06-29 11:52:30,585 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-06-29 11:52:31,150 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 11:52:31,165 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 11:52:31,714 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 11:52:31,719 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 11:52:31,720 - Starting service [Tomcat]
+[INFO]2023-06-29 11:52:31,720 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 11:52:31,810 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 11:52:31,811 - Root WebApplicationContext: initialization completed in 1225 ms
+[INFO]2023-06-29 11:52:31,936 - HikariPool-1 - Starting...
+[INFO]2023-06-29 11:52:32,074 - HikariPool-1 - Start completed.
+[INFO]2023-06-29 11:52:32,149 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-06-29 11:52:32,265 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-06-29 11:52:32,372 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 11:52:32,497 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 11:52:32,508 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 11:52:32,681 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [D:\shixun2project\springboot\target\classes\com\cqu\springboot\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+[INFO]2023-06-29 11:52:32,681 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 11:52:32,684 - HikariPool-1 - Shutdown initiated...
+[INFO]2023-06-29 11:52:32,689 - HikariPool-1 - Shutdown completed.
+[INFO]2023-06-29 11:52:32,690 - Stopping service [Tomcat]
+[ERROR]2023-06-29 11:52:32,747 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [D:\shixun2project\springboot\target\classes\com\cqu\springboot\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$225/1124406627.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.cqu.springboot.SpringbootApplication.main(SpringbootApplication.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [D:\shixun2project\springboot\target\classes\com\cqu\springboot\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$225/1124406627.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDao' defined in file [D:\shixun2project\springboot\target\classes\com\cqu\springboot\dao\UserDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$225/1124406627.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$225/1124406627.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 53 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 67 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:187)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$3f1298ab.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$3f1298ab$$FastClassBySpringCGLIB$$eafb97a2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$3f1298ab.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 68 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.cqu.springboot.dao.UserDao.queryById. please check file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml] and file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:128)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698)
+	... 81 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.cqu.springboot.dao.UserDao.queryById. please check file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml] and file [D:\shixun2project\springboot\target\classes\mapper\UserDao.xml]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1071)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1024)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:822)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:223)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:144)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:136)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:126)
+	... 83 common frames omitted
+[INFO]2023-06-29 11:53:45,942 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 17568 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 11:53:45,943 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 11:53:45,975 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-06-29 11:53:45,975 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-06-29 11:53:46,390 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 11:53:46,403 - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 11:53:46,876 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 11:53:46,882 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 11:53:46,884 - Starting service [Tomcat]
+[INFO]2023-06-29 11:53:46,884 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 11:53:46,971 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 11:53:46,971 - Root WebApplicationContext: initialization completed in 995 ms
+[INFO]2023-06-29 11:53:47,082 - HikariPool-1 - Starting...
+[INFO]2023-06-29 11:53:47,218 - HikariPool-1 - Start completed.
+[INFO]2023-06-29 11:53:47,274 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-06-29 11:53:47,366 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-06-29 11:53:47,441 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 11:53:47,534 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 11:53:47,545 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 11:53:47,760 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 11:53:48,004 - LiveReload server is running on port 35729
+[INFO]2023-06-29 11:53:48,015 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 11:53:48,030 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 11:53:48,051 - Started SpringbootApplication in 2.395 seconds (JVM running for 4.234)
+[INFO]2023-06-29 15:07:43,651 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 19612 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:07:43,652 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:07:43,693 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-06-29 15:07:43,693 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-06-29 15:07:44,196 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:07:44,212 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:07:44,791 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:07:44,798 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:07:44,800 - Starting service [Tomcat]
+[INFO]2023-06-29 15:07:44,800 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:07:44,900 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:07:44,900 - Root WebApplicationContext: initialization completed in 1207 ms
+[INFO]2023-06-29 15:07:45,046 - HikariPool-1 - Starting...
+[INFO]2023-06-29 15:07:45,190 - HikariPool-1 - Start completed.
+[INFO]2023-06-29 15:07:45,283 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-06-29 15:07:45,411 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-06-29 15:07:45,511 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:07:45,632 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:07:45,646 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:07:45,915 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:07:46,175 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:07:46,186 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:07:46,201 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:07:46,225 - Started SpringbootApplication in 2.961 seconds (JVM running for 4.933)
+[INFO]2023-06-29 15:08:13,570 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-06-29 15:08:13,571 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-06-29 15:08:13,572 - Completed initialization in 1 ms
+[INFO]2023-06-29 15:10:36,445 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:10:37,611 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:37,611 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:10:37,612 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]2023-06-29 15:10:37,615 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:37,616 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:37,618 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:10:37,620 - HikariPool-1 - Shutdown initiated...
+[INFO]2023-06-29 15:10:37,626 - HikariPool-1 - Shutdown completed.
+[INFO]2023-06-29 15:10:37,774 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 19612 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:10:37,775 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:10:37,930 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:10:37,934 - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:10:38,042 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:10:38,043 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:38,043 - Starting service [Tomcat]
+[INFO]2023-06-29 15:10:38,043 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:10:38,061 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:10:38,061 - Root WebApplicationContext: initialization completed in 285 ms
+[INFO]2023-06-29 15:10:38,089 - HikariPool-2 - Starting...
+[INFO]2023-06-29 15:10:38,094 - HikariPool-2 - Start completed.
+[INFO]2023-06-29 15:10:38,108 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:10:38,112 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:10:38,112 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:10:38,178 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:10:38,264 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:10:38,269 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:38,271 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:10:38,282 - Started SpringbootApplication in 0.531 seconds (JVM running for 176.99)
+[INFO]2023-06-29 15:10:38,284 - Condition evaluation unchanged
+[INFO]2023-06-29 15:10:48,618 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:10:48,619 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:10:48,653 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-06-29 15:10:48,653 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-06-29 15:10:49,096 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:10:49,111 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:10:49,605 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:10:49,616 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:49,617 - Starting service [Tomcat]
+[INFO]2023-06-29 15:10:49,617 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:10:49,699 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:10:49,699 - Root WebApplicationContext: initialization completed in 1045 ms
+[INFO]2023-06-29 15:10:49,816 - HikariPool-1 - Starting...
+[INFO]2023-06-29 15:10:49,968 - HikariPool-1 - Start completed.
+[INFO]2023-06-29 15:10:50,045 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-06-29 15:10:50,139 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-06-29 15:10:50,221 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:10:50,337 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:10:50,346 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:10:50,589 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:10:50,838 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:10:50,848 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:10:50,863 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:10:50,886 - Started SpringbootApplication in 2.571 seconds (JVM running for 4.746)
+[INFO]2023-06-29 15:10:55,303 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-06-29 15:10:55,303 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-06-29 15:10:55,304 - Completed initialization in 1 ms
+[INFO]2023-06-29 15:11:36,485 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:11:37,718 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:37,718 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:11:37,719 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]2023-06-29 15:11:37,722 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:37,725 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:37,727 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:11:37,729 - HikariPool-1 - Shutdown initiated...
+[INFO]2023-06-29 15:11:37,735 - HikariPool-1 - Shutdown completed.
+[INFO]2023-06-29 15:11:37,886 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:11:37,886 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:11:38,046 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:11:38,049 - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:11:38,150 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:11:38,151 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:38,151 - Starting service [Tomcat]
+[INFO]2023-06-29 15:11:38,151 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:11:38,173 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:11:38,173 - Root WebApplicationContext: initialization completed in 285 ms
+[INFO]2023-06-29 15:11:38,197 - HikariPool-2 - Starting...
+[INFO]2023-06-29 15:11:38,202 - HikariPool-2 - Start completed.
+[INFO]2023-06-29 15:11:38,209 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:11:38,215 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:11:38,215 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:11:38,268 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:11:38,353 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:11:38,358 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:38,360 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:11:38,370 - Started SpringbootApplication in 0.51 seconds (JVM running for 52.229)
+[INFO]2023-06-29 15:11:38,371 - Condition evaluation unchanged
+[INFO]2023-06-29 15:11:52,852 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:11:54,142 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:54,143 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:11:54,145 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:54,148 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:54,150 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:11:54,150 - HikariPool-2 - Shutdown initiated...
+[INFO]2023-06-29 15:11:54,154 - HikariPool-2 - Shutdown completed.
+[INFO]2023-06-29 15:11:54,304 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:11:54,304 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:11:54,426 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:11:54,429 - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:11:54,492 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:11:54,492 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:54,493 - Starting service [Tomcat]
+[INFO]2023-06-29 15:11:54,493 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:11:54,509 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:11:54,509 - Root WebApplicationContext: initialization completed in 203 ms
+[INFO]2023-06-29 15:11:54,530 - HikariPool-3 - Starting...
+[INFO]2023-06-29 15:11:54,534 - HikariPool-3 - Start completed.
+[INFO]2023-06-29 15:11:54,543 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:11:54,555 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:11:54,555 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:11:54,603 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:11:54,680 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:11:54,684 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:11:54,686 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:11:54,697 - Started SpringbootApplication in 0.416 seconds (JVM running for 68.557)
+[INFO]2023-06-29 15:11:54,698 - Condition evaluation unchanged
+[INFO]2023-06-29 15:12:21,222 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:12:22,483 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:22,483 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:12:22,487 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:22,489 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:22,491 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:12:22,492 - HikariPool-3 - Shutdown initiated...
+[INFO]2023-06-29 15:12:22,495 - HikariPool-3 - Shutdown completed.
+[INFO]2023-06-29 15:12:22,636 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:12:22,636 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:12:22,779 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:12:22,782 - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:12:22,872 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:12:22,873 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:22,873 - Starting service [Tomcat]
+[INFO]2023-06-29 15:12:22,873 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:12:22,889 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:12:22,889 - Root WebApplicationContext: initialization completed in 252 ms
+[INFO]2023-06-29 15:12:22,908 - HikariPool-4 - Starting...
+[INFO]2023-06-29 15:12:22,912 - HikariPool-4 - Start completed.
+[INFO]2023-06-29 15:12:22,919 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:12:22,925 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:12:22,925 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:12:22,978 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:12:23,093 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:12:23,099 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:23,102 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:12:23,112 - Started SpringbootApplication in 0.498 seconds (JVM running for 96.972)
+[INFO]2023-06-29 15:12:23,113 - Condition evaluation unchanged
+[INFO]2023-06-29 15:12:24,510 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:12:26,006 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:26,006 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:12:26,012 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:26,018 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:26,021 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:12:26,022 - HikariPool-4 - Shutdown initiated...
+[INFO]2023-06-29 15:12:26,029 - HikariPool-4 - Shutdown completed.
+[INFO]2023-06-29 15:12:26,182 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:12:26,182 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:12:26,326 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:12:26,330 - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:12:26,397 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:12:26,397 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:26,397 - Starting service [Tomcat]
+[INFO]2023-06-29 15:12:26,397 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:12:26,416 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:12:26,416 - Root WebApplicationContext: initialization completed in 233 ms
+[INFO]2023-06-29 15:12:26,441 - HikariPool-5 - Starting...
+[INFO]2023-06-29 15:12:26,444 - HikariPool-5 - Start completed.
+[INFO]2023-06-29 15:12:26,452 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:12:26,458 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:12:26,458 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:12:26,511 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:12:26,600 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:12:26,605 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:26,607 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:12:26,617 - Started SpringbootApplication in 0.455 seconds (JVM running for 100.477)
+[INFO]2023-06-29 15:12:26,619 - Condition evaluation unchanged
+[INFO]2023-06-29 15:12:28,011 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:12:29,316 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:29,317 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:12:29,319 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:29,321 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:29,322 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:12:29,323 - HikariPool-5 - Shutdown initiated...
+[INFO]2023-06-29 15:12:29,326 - HikariPool-5 - Shutdown completed.
+[INFO]2023-06-29 15:12:29,423 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:12:29,423 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:12:29,541 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:12:29,544 - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:12:29,604 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:12:29,605 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:29,605 - Starting service [Tomcat]
+[INFO]2023-06-29 15:12:29,605 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:12:29,621 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:12:29,621 - Root WebApplicationContext: initialization completed in 196 ms
+[INFO]2023-06-29 15:12:29,641 - HikariPool-6 - Starting...
+[INFO]2023-06-29 15:12:29,644 - HikariPool-6 - Start completed.
+[INFO]2023-06-29 15:12:29,650 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:12:29,655 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:12:29,655 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:12:29,692 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:12:29,756 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:12:29,761 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:29,763 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:12:29,770 - Started SpringbootApplication in 0.369 seconds (JVM running for 103.629)
+[INFO]2023-06-29 15:12:29,771 - Condition evaluation unchanged
+[INFO]2023-06-29 15:12:31,166 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:12:32,537 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:32,537 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:12:32,540 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:32,542 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:32,543 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:12:32,544 - HikariPool-6 - Shutdown initiated...
+[INFO]2023-06-29 15:12:32,547 - HikariPool-6 - Shutdown completed.
+[INFO]2023-06-29 15:12:32,692 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:12:32,692 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:12:32,863 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:12:32,866 - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:12:33,061 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:12:33,062 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:33,063 - Starting service [Tomcat]
+[INFO]2023-06-29 15:12:33,063 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:12:33,114 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:12:33,114 - Root WebApplicationContext: initialization completed in 419 ms
+[INFO]2023-06-29 15:12:33,157 - HikariPool-7 - Starting...
+[INFO]2023-06-29 15:12:33,161 - HikariPool-7 - Start completed.
+[INFO]2023-06-29 15:12:33,173 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:12:33,186 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:12:33,186 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:12:33,245 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:12:33,315 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:12:33,320 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:33,321 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:12:33,332 - Started SpringbootApplication in 0.67 seconds (JVM running for 107.192)
+[INFO]2023-06-29 15:12:33,333 - Condition evaluation unchanged
+[INFO]2023-06-29 15:12:34,740 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:12:36,253 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:36,253 - Stopping service [Tomcat]
+[INFO]2023-06-29 15:12:36,257 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:36,258 - Destroying ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:36,259 - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]2023-06-29 15:12:36,260 - HikariPool-7 - Shutdown initiated...
+[INFO]2023-06-29 15:12:36,262 - HikariPool-7 - Shutdown completed.
+[INFO]2023-06-29 15:12:36,361 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 21536 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:12:36,361 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:12:36,478 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:12:36,483 - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:12:36,576 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:12:36,576 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:36,576 - Starting service [Tomcat]
+[INFO]2023-06-29 15:12:36,576 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:12:36,598 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:12:36,598 - Root WebApplicationContext: initialization completed in 235 ms
+[INFO]2023-06-29 15:12:36,630 - HikariPool-8 - Starting...
+[INFO]2023-06-29 15:12:36,635 - HikariPool-8 - Start completed.
+[INFO]2023-06-29 15:12:36,644 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:12:36,657 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:12:36,658 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:12:36,707 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:12:36,788 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:12:36,792 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:12:36,794 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:12:36,806 - Started SpringbootApplication in 0.464 seconds (JVM running for 110.666)
+[INFO]2023-06-29 15:12:36,807 - Condition evaluation unchanged
+[INFO]2023-06-29 15:12:38,204 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO]2023-06-29 15:13:56,187 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 22432 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 15:13:56,188 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 15:13:56,221 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-06-29 15:13:56,221 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-06-29 15:13:56,683 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 15:13:56,698 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 15:13:57,182 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 15:13:57,187 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:13:57,188 - Starting service [Tomcat]
+[INFO]2023-06-29 15:13:57,189 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 15:13:57,264 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 15:13:57,264 - Root WebApplicationContext: initialization completed in 1043 ms
+[INFO]2023-06-29 15:13:57,368 - HikariPool-1 - Starting...
+[INFO]2023-06-29 15:13:57,505 - HikariPool-1 - Start completed.
+[INFO]2023-06-29 15:13:57,572 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-06-29 15:13:57,661 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-06-29 15:13:57,742 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 15:13:57,850 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 15:13:57,859 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 15:13:58,151 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 15:13:58,518 - LiveReload server is running on port 35729
+[INFO]2023-06-29 15:13:58,532 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 15:13:58,548 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 15:13:58,572 - Started SpringbootApplication in 2.703 seconds (JVM running for 4.691)
+[INFO]2023-06-29 15:14:11,220 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-06-29 15:14:11,220 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-06-29 15:14:11,221 - Completed initialization in 1 ms
+[INFO]2023-06-29 17:07:18,817 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 5332 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-06-29 17:07:18,818 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-06-29 17:07:18,855 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-06-29 17:07:18,855 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-06-29 17:07:19,335 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-06-29 17:07:19,350 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO]2023-06-29 17:07:19,929 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-06-29 17:07:19,935 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 17:07:19,936 - Starting service [Tomcat]
+[INFO]2023-06-29 17:07:19,936 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-06-29 17:07:20,035 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-06-29 17:07:20,035 - Root WebApplicationContext: initialization completed in 1180 ms
+[INFO]2023-06-29 17:07:20,156 - HikariPool-1 - Starting...
+[INFO]2023-06-29 17:07:20,293 - HikariPool-1 - Start completed.
+[INFO]2023-06-29 17:07:20,370 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-06-29 17:07:20,482 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-06-29 17:07:20,588 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-06-29 17:07:20,705 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-06-29 17:07:20,713 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-06-29 17:07:20,971 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-06-29 17:07:21,217 - LiveReload server is running on port 35729
+[INFO]2023-06-29 17:07:21,228 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-06-29 17:07:21,245 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-06-29 17:07:21,266 - Started SpringbootApplication in 2.816 seconds (JVM running for 4.867)
+[INFO]2023-06-29 17:08:59,119 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-06-29 17:08:59,119 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-06-29 17:08:59,121 - Completed initialization in 2 ms

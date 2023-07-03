@@ -1,0 +1,27 @@
+[INFO]2023-07-03 10:32:19,662 - Starting SpringbootApplication using Java 1.8.0_51 on LAPTOP-F3V62GB7 with PID 17820 (D:\shixun2project\springboot\target\classes started by 86181 in D:\shixun2project\springboot)
+[INFO]2023-07-03 10:32:19,663 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-07-03 10:32:19,701 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-07-03 10:32:19,701 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-07-03 10:32:20,233 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]2023-07-03 10:32:20,248 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+[INFO]2023-07-03 10:32:20,883 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-07-03 10:32:20,892 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-07-03 10:32:20,894 - Starting service [Tomcat]
+[INFO]2023-07-03 10:32:20,894 - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO]2023-07-03 10:32:21,014 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-07-03 10:32:21,015 - Root WebApplicationContext: initialization completed in 1313 ms
+[INFO]2023-07-03 10:32:21,154 - HikariPool-1 - Starting...
+[INFO]2023-07-03 10:32:21,324 - HikariPool-1 - Start completed.
+[INFO]2023-07-03 10:32:21,405 - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO]2023-07-03 10:32:21,565 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO]2023-07-03 10:32:21,679 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO]2023-07-03 10:32:21,812 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO]2023-07-03 10:32:21,822 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]2023-07-03 10:32:22,142 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]2023-07-03 10:32:22,401 - LiveReload server is running on port 35729
+[INFO]2023-07-03 10:32:22,412 - Starting ProtocolHandler ["http-nio-8080"]
+[INFO]2023-07-03 10:32:22,426 - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO]2023-07-03 10:32:22,452 - Started SpringbootApplication in 3.186 seconds (JVM running for 5.708)
+[INFO]2023-07-03 10:33:15,119 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-07-03 10:33:15,119 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-07-03 10:33:15,122 - Completed initialization in 2 ms
